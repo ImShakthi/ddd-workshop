@@ -1,18 +1,38 @@
 package com.ddd.workshop.domain.models;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
-
+@EqualsAndHashCode
 public class Cart {
-    private final List<Product> products = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
+    private final List<Item> removedItems = new ArrayList<>();
 
-    public void add(Product product) {
-        System.out.println("added item" + product.getName());
-        products.add(product);
+    @Getter
+    private final UUID uuid;
+
+    public Cart() {
+        uuid = UUID.randomUUID();
     }
 
-    public List<Product> getItems() {
-        return products;
+    public void add(Item item) {
+        System.out.println("added item" + item);
+        items.add(item);
     }
+
+    public void remove(Item item) {
+        System.out.println("removed item" + item);
+        items.remove(item);
+        removedItems.add(item);
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public List<Item> getRemovedItems() { return removedItems; }
 }

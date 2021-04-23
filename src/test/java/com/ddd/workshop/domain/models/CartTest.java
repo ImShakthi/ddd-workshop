@@ -4,19 +4,25 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 
 public class CartTest extends TestCase {
-    public void testShouldAddIpadProToCart() {
+
+    public void testShouldItemsInCart() {
         Cart cart = new Cart();
+        Item batItem = Item.builder().product(new Product("GM Cricket Bat")).quantity(2).build();
+        Item ipadItem = Item.builder().product(new Product("IPad Pro")).quantity(1).build();
+        Item inkItem = Item.builder().product(new Product("Hero Ink Pen")).quantity(1).build();
 
-        Product product = new Product("IPad Pro");
-        cart.add(product);
-        Assert.assertEquals("IPad Pro", cart.getItems().get(0).getName());
-    }
+        cart.add(inkItem);
+        cart.add(ipadItem);
+        cart.add(batItem);
 
-    public void testShouldAddHeroInkPenToCart() {
-        Cart cart = new Cart();
-        Product product = new Product("Hero Ink Pen");
-        cart.add(product);
-        Assert.assertEquals("Hero Ink Pen", cart.getItems().get(0).getName());
+        System.out.println(cart.getItems());
+        cart.getRemovedItems();
 
+        Cart cart2 = new Cart();
+        cart2.add(inkItem);
+        cart2.add(ipadItem);
+        cart2.add(batItem);
+
+        Assert.assertNotEquals(cart, cart2);
     }
 }
