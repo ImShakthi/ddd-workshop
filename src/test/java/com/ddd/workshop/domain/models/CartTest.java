@@ -9,7 +9,7 @@ public class CartTest extends TestCase {
 
         Product product = new Product("IPad Pro");
         cart.add(product);
-        Assert.assertEquals("Ipad Pro", cart.getItems().get(0).getName());
+        Assert.assertEquals("IPad Pro", cart.getItems().get(0).getName());
     }
 
     public void testShouldAddHeroInkPenToCart() {
