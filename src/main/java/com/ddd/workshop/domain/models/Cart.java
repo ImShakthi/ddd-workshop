@@ -9,14 +9,16 @@ import java.util.UUID;
 
 @EqualsAndHashCode
 public class Cart {
-    private final List<Item> items = new ArrayList<>();
-    private final List<Item> removedItems = new ArrayList<>();
+    private final List<Item> items;
+    private final List<Item> removedItems;
 
     @Getter
     private final UUID uuid;
 
     public Cart() {
         uuid = UUID.randomUUID();
+        items = new ArrayList<>();
+        removedItems = new ArrayList<>();
     }
 
     public void add(Item item) {

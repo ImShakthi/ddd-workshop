@@ -15,9 +15,6 @@ public class CartTest extends TestCase {
         cart.add(ipadItem);
         cart.add(batItem);
 
-        System.out.println(cart.getItems());
-        cart.getRemovedItems();
-
         Cart cart2 = new Cart();
         cart2.add(inkItem);
         cart2.add(ipadItem);
