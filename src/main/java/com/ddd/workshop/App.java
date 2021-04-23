@@ -1,4 +1,4 @@
-package com.ddd.workshop.domain;
+package com.ddd.workshop;
 
 /**
  * Hello world!
