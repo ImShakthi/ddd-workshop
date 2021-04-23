@@ -10,6 +10,6 @@ import lombok.ToString;
 @Builder
 @ToString
 public class Item {
-    private Product product;
-    private Integer quantity;
+    private final Product product;
+    private final Integer quantity;
 }
