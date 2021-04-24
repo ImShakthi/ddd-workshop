@@ -12,4 +12,5 @@ import lombok.ToString;
 public class Product {
     private final String name;
     private final Price price;
+    private final Double weight;
 }

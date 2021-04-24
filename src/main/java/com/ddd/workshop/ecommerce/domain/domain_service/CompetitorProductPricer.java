@@ -1,4 +1,4 @@
-package com.ddd.workshop.ecommerce.domain.service;
+package com.ddd.workshop.ecommerce.domain.domain_service;
 
 import com.ddd.workshop.ecommerce.domain.models.Price;
 
@@ -14,9 +14,9 @@ public class CompetitorProductPricer {
             competitorProductPricing = new HashMap<>();
 
             Currency inr = Currency.getInstance("INR");
-            competitorProductPricing.put("GM Cricket Bat", new Price(120, inr));
+            competitorProductPricing.put("GM Cricket Bat", new Price(100, inr));
             competitorProductPricing.put("IPad Pro", new Price(100, inr));
-            competitorProductPricing.put("Hero Ink Pen", new Price(50, inr));
+            competitorProductPricing.put("Hero Ink Pen", new Price(100, inr));
         }
     }
 
