@@ -3,11 +3,15 @@ package com.ddd.workshop.domain.models;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
-@Getter
+import java.util.Currency;
+
 @AllArgsConstructor
+@Getter
+@ToString
 @EqualsAndHashCode
-public class Product {
-    private final String name;
-    private final Price price;
+public class Price {
+    private final double price;
+    private final Currency currency;
 }

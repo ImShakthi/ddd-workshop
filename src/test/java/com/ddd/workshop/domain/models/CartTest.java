@@ -10,9 +10,18 @@ public class CartTest extends TestCase {
     public void testShouldItemsInCart() {
         Cart cart = new Cart();
         Currency inr = Currency.getInstance("INR");
-        Item batItem = Item.builder().product(new Product("GM Cricket Bat", 10.50, inr)).quantity(2).build();
-        Item ipadItem = Item.builder().product(new Product("IPad Pro", 100, inr)).quantity(1).build();
-        Item inkItem = Item.builder().product(new Product("Hero Ink Pen", 15, inr)).quantity(1).build();
+        Item batItem = Item.builder()
+                .product(new Product("GM Cricket Bat", new Price(10.50, inr)))
+                .quantity(2)
+                .build();
+        Item ipadItem = Item.builder()
+                .product(new Product("IPad Pro", new Price(10, inr)))
+                .quantity(1)
+                .build();
+        Item inkItem = Item.builder()
+                .product(new Product("Hero Ink Pen", new Price(15, inr)))
+                .quantity(1)
+                .build();
 
         cart.add(inkItem);
         cart.add(ipadItem);
