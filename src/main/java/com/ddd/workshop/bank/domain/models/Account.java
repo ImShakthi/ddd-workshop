@@ -1,4 +1,4 @@
-package com.ddd.workshop.domain.models.miscellaneous;
+package com.ddd.workshop.bank.domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

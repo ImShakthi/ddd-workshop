@@ -1,4 +1,4 @@
-package com.ddd.workshop;
+package com.ddd.workshop.ecommerce;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,6 +1,6 @@
-package com.ddd.workshop.domain.models;
+package com.ddd.workshop.ecommerce.domain.models;
 
-import com.ddd.workshop.domain.service.CompetitorProductPricer;
+import com.ddd.workshop.ecommerce.domain.service.CompetitorProductPricer;
 import junit.framework.TestCase;
 import org.junit.Assert;
 

@@ -1,4 +1,4 @@
-package com.ddd.workshop.domain.models;
+package com.ddd.workshop.ecommerce.domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.ddd.workshop;
+package com.ddd.workshop.ecommerce;
 
 /**
  * Hello world!

@@ -1,6 +1,6 @@
-package com.ddd.workshop.domain.service;
+package com.ddd.workshop.ecommerce.domain.service;
 
-import com.ddd.workshop.domain.models.Price;
+import com.ddd.workshop.ecommerce.domain.models.Price;
 
 import java.util.Currency;
 import java.util.HashMap;
