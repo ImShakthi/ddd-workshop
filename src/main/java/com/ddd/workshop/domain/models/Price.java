@@ -12,6 +12,11 @@ import java.util.Currency;
 @ToString
 @EqualsAndHashCode
 public class Price {
-    private final double price;
+    private final double amount;
     private final Currency currency;
+
+    public Price getDiscountedPrice(double discountPercentage) {
+        double discountAmount = this.amount * (discountPercentage / 100);
+        return new Price(this.amount - discountAmount, this.currency);
+    }
 }
