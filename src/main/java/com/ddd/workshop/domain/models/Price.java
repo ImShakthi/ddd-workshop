@@ -15,7 +15,7 @@ public class Price {
     private final double amount;
     private final Currency currency;
 
-    public Price getDiscountedPrice(double discountPercentage) {
+    public Price reduceByPercentage(double discountPercentage) {
         double discountAmount = this.amount * (discountPercentage / 100);
         return new Price(this.amount - discountAmount, this.currency);
     }
