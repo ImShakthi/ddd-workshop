@@ -6,6 +6,7 @@ import lombok.Getter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @EqualsAndHashCode
 public class Cart {
@@ -14,6 +15,7 @@ public class Cart {
 
     @Getter
     private final UUID uuid;
+    private boolean checkedOut;
 
     public Cart() {
         uuid = UUID.randomUUID();
@@ -37,4 +39,18 @@ public class Cart {
     }
 
     public List<Item> getRemovedItems() { return removedItems; }
+
+    public Order checkout() {
+        this.checkedOut = true;
+        List<Product> productList = items.stream().map(item ->
+        {
+            List<Product> products = new ArrayList<>();
+            for (int i = 0; i < item.getQuantity(); i++) {
+                products.add(item.getProduct());
+            }
+            return products;
+        }).flatMap(List::stream).collect(Collectors.toList());
+        return new Order(productList);
+    }
+
 }

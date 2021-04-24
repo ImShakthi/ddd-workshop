@@ -53,5 +53,6 @@ public class CartTest extends TestCase {
         cart.add(inkItem);
         cart.add(ipadItem);
         cart.add(batItem);
+        cart.checkout();
     }
 }
